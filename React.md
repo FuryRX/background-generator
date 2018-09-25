@@ -22,5 +22,30 @@ element,
 document.getElementById('root')
 );
 ```
-You can put any JavaScript expressions inside the curly braces in JSX. Such as 2 + 2 or user.firstname.
+You can put any JavaScript expressions inside the curly braces in JSX. Such as **2 + 2** or **user.firstname**.
 
+You can also use if statements and for loops, assign variables and accept arguments.
+
+```js
+function getGreeting(user) {
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
+```
+
+## Attributes with JSX ##
+
+You can use quotes to specify a string literals as attributes:
+```js
+const element = <div tabIndex="0"></div>;
+```
+
+Or you can also use curly braces to embed a JavaScript expression inside a attribute:
+
+```js
+const element = <img src={user.avatarUrl}></img>;
+```
+
+Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
