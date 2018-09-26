@@ -28,4 +28,4 @@
       - `Git push`
       - Login with your github account
 7. Now remember when you start you need to pull the project down incase of any new code
-    * Git pull
+    * `Git pull`
